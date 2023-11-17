@@ -11,7 +11,7 @@ export const getClothes = (req, res) => {
         if (!clothes) {
             return res.status(404).send({ message: "Clothe not found" });
         }
-        return res.status(200).send({ message: `Clothe found ${clothes.length}`, clothes });
+        return res.status(200).send({ total: `${clothes.length}`, clothes });
     }
 
 
@@ -22,7 +22,7 @@ export const getClothes = (req, res) => {
         if (!clothes) {
             return res.status(404).send({ message: "Clothe not found" });
         }
-        return res.status(200).send({ message: `Clothe found ${clothes.length}`, clothes });
+        return res.status(200).send({ total: `${clothes.length}`, clothes });
     }
 
 
@@ -33,7 +33,7 @@ export const getClothes = (req, res) => {
         if (!clothes) {
             return res.status(404).send({ message: "Clothe not found" });
         }
-        return res.status(200).send({ message: `Clothe found ${clothes.length}`, clothes });
+        return res.status(200).send({ total: `${clothes.length}`, clothes });
     }
 
 
@@ -44,13 +44,13 @@ export const getClothes = (req, res) => {
         if (!clothes) {
             return res.status(404).send({ message: "Clothe not found" });
         }
-        return res.status(200).send({ message: `Clothe found ${clothes.length}`, clothes });
+        return res.status(200).send({ total: `${clothes.length}`, clothes });
     }
 
 
     const clothe = clotheList.getAllClothes();
 
-    return res.status(200).send({ message: `Clothe found 20`, clothe });
+    return res.status(200).send({ total: `${clothe.length}`, clothe });
 }
 
 export const getClotheById = (req, res) => {
